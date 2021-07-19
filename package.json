@@ -1,5 +1,5 @@
 {
-  "name": "pc-vn",
+  "name": "@do-kevin/pc-vn",
   "version": "1.0.1",
   "description": "Helper to get provinces, cities, wards of Vietnam",
   "main": "index.js",
@@ -12,17 +12,16 @@
     "How to get these provinces of Vietnam",
     "How to get these cities of Vietnam"
   ],
-  "homepage": "https://github.com/giangmd/pc-vn#readme",
+  "homepage": "https://github.com/do-kevin/pc-vn/pc-vn#readme",
   "bugs": {
-    "url" : "https://github.com/giangmd/pc-vn/issues",
-    "email" : "giangmd93@gmail.com"
+    "url": "https://github.com/do-kevin/pc-vn/pc-vn/issues"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/giangmd/pc-vn.git"
+    "type": "git",
+    "url": "https://github.com/do-kevin/pc-vn/pc-vn.git"
   },
-  "author": "giangmd",
-  "license": "ISC",
+  "author": "Kevin Do",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^6.2.1"
   }
