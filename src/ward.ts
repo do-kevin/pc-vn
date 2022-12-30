@@ -1,22 +1,14 @@
 import wards from './data/wards.json';
-import { District } from './district';
+import { Ward, WardFunction } from '../types/ward';
 
-export interface Ward extends District {
-  district_code: string;
-  district_name: string;
-  province_code: string;
-  province_name: string;
-  full_name: string;
-}
+const Wards = wards satisfies Ward[];
 
-const Wards = wards as Ward[];
+export const getWards = () => Wards;
 
-export const getWards = (): Ward[] => Wards;
-
-export const getWardsByDistrictCode = (districtCode: string): Ward[] => {
-  return Wards.filter((w: Ward) => w.district_code === districtCode);
+export const getWardsByDistrictCode: WardFunction = (districtCode) => {
+  return Wards.filter((ward) => ward.district_code === districtCode);
 };
 
-export const getWardsByProvinceCode = (provinceCode: string): Ward[] => {
-  return Wards.filter((w: Ward) => w.province_code === provinceCode);
+export const getWardsByProvinceCode: WardFunction = (provinceCode) => {
+  return Wards.filter((ward) => ward.province_code === provinceCode);
 };
