@@ -1,7 +1,7 @@
 {
   "name": "@do-kevin/pc-vn",
   "private": false,
-  "version": "2.0.6",
+  "version": "2.1.0",
   "description": "Helper to get provinces, cities, wards of Vietnam",
   "main": "dist/pc-vn.cjs.js",
   "module": "dist/es/pc-vn.esm.js",
@@ -20,13 +20,13 @@
     "How to get these provinces of Vietnam",
     "How to get these cities of Vietnam"
   ],
-  "homepage": "https://github.com/do-kevin/pc-vn/pc-vn#readme",
+  "homepage": "https://github.com/do-kevin/pc-vn",
   "bugs": {
     "url": "https://github.com/do-kevin/pc-vn/pc-vn/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/do-kevin/pc-vn/pc-vn.git"
+    "url": "https://github.com/do-kevin/pc-vn.git"
   },
   "author": "Kevin Do",
   "license": "MIT",
