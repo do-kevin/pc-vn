@@ -1,11 +1,9 @@
 import provinces from './data/provinces.json';
+import { Province } from '../types/province';
 
-export interface Province {
-  code: string;
-  name: string;
-  unit: string;
-}
+const Provinces = provinces satisfies Province[];
 
-const Provinces = provinces as Province[];
-
-export const getProvinces = (): Province[] => Provinces;
+/**
+ * Retrieve a list of all provinces.
+ */
+export const getProvinces = () => Provinces;
