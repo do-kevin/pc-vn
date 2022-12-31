@@ -1,22 +1,57 @@
 import wards from './data/wards.json';
-import { District } from './district';
+import { Ward, WardFunction } from '../types/ward';
 
-export interface Ward extends District {
-  district_code: string;
-  district_name: string;
-  province_code: string;
-  province_name: string;
-  full_name: string;
-}
+const Wards = wards satisfies Ward[];
 
-const Wards = wards as Ward[];
+/**
+ * Retrieve a list of all wards.
+ */
+export const getWards = () => Wards;
 
-export const getWards = (): Ward[] => Wards;
-
-export const getWardsByDistrictCode = (districtCode: string): Ward[] => {
-  return Wards.filter((w: Ward) => w.district_code === districtCode);
+/**
+ * Retrieve a list of wards based on district code.
+ * 
+ * @param districtCode - string value of district_code
+ * @returns Array of wards.
+ * 
+ * @example
+ * `getWardsByDistrictCode('281')`
+ * ##### Result:
+ * ```
+ * [{
+ *   code: '10357',
+ *   name: 'Xã Viên An',
+ *   unit: 'Xã',
+ *   district_code: '281',
+ *   district_name: 'Huyện Ứng Hòa',
+ *   province_code: '01',
+ *   province_name: 'Thành phố Hà Nội',
+ *   full_name: 'Xã Viên An, Huyện Ứng Hòa, Thành phố Hà Nội'}, ...]
+ * ```
+ */
+export const getWardsByDistrictCode: WardFunction = (districtCode) => {
+  return Wards.filter(ward => ward.district_code === districtCode);
 };
 
-export const getWardsByProvinceCode = (provinceCode: string): Ward[] => {
-  return Wards.filter((w: Ward) => w.province_code === provinceCode);
+/**
+ * Retrieve a list of wards based on province code.
+ * @param provinceCode - string value of province_code
+ * @returns Array of wards
+ * @example
+ * `getDistrictsByProvinceCode('96')`
+ * ##### Result:
+ * ```
+ * [{
+ *    code: '32242',
+ *    name: 'Xã Viên An',
+ *    unit: 'Xã',
+ *    district_code: '973',
+ *    district_name: 'Huyện Ngọc Hiển',
+ *    province_code: '96',
+ *    province_name: 'Tỉnh Cà Mau',
+ *    full_name: 'Xã Viên An, Huyện Ngọc Hiển, Tỉnh Cà Mau'}, ...]
+ * ```
+ */
+export const getWardsByProvinceCode: WardFunction = (provinceCode) => {
+  return Wards.filter(ward => ward.province_code === provinceCode);
 };
