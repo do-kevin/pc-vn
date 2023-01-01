@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import pkg from './package.json';
+import terser from '@rollup/plugin-terser';
 
 export default [
   // UMD
@@ -21,6 +22,7 @@ export default [
       typescript(),
       resolve(),
       commonjs(),
+      terser(),
       analyze(),
     ],
   },
@@ -37,6 +39,7 @@ export default [
         compact: true,
       }),
       typescript(),
+      terser(),
       analyze(),
     ],
   },
@@ -56,6 +59,7 @@ export default [
       json({
         compact: true,
       }),
+      terser(),
       typescript(),
       analyze(),
     ],
@@ -77,6 +81,7 @@ export default [
         compact: true,
       }),
       typescript(),
+      terser(),
       analyze(),
     ],
   },
@@ -97,6 +102,7 @@ export default [
         compact: true,
       }),
       typescript(),
+      terser(),
       analyze(),
     ],
   },
