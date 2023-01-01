@@ -1,7 +1,7 @@
 {
   "name": "@do-kevin/pc-vn",
   "private": false,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Helper to get provinces, cities, wards of Vietnam",
   "main": "dist/pc-vn.cjs.js",
   "module": "dist/es/pc-vn.esm.js",
