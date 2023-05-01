@@ -1,0 +1,31 @@
+---
+---
+
+```javascript
+import { getProvinces, getWardsByProvinceCode } from '@do-kevin/pc-vn';
+
+const lastProvince = getProvinces().slice(-1);
+
+// lastProvince:
+//  {
+//    "code": "96",
+//    "name": "Tỉnh Cà Mau",
+//    "unit": "Tỉnh"
+//  }
+
+const wards = getWardsByProvinceCode(lastProvince.code);
+
+const result = wards.find((ward) => ward.name === 'Xã Viên An' && ward.district_code === '973');
+
+// result:
+//  {
+//    "code": "32242",
+//    "name": "Xã Viên An",
+//    "unit": "Xã",
+//    "district_code": "973",
+//    "district_name": "Huyện Ngọc Hiển",
+//    "province_code": "96",
+//    "province_name": "Tỉnh Cà Mau",
+//    "full_name": "Xã Viên An, Huyện Ngọc Hiển, Tỉnh Cà Mau"
+//  }
+```

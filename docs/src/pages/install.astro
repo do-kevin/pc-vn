@@ -1,0 +1,21 @@
+---
+import { Content as InstallContent, frontmatter } from "../contents/installation.mdx";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DashboardLayout from "../layouts/DashboardLayout.astro";
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+    <DashboardLayout>
+        <main class="mx-auto p-4">
+            <article>
+                <InstallContent />
+            </article>
+        </main>
+    </DashboardLayout>
+</BaseLayout>
+
+<style lang="scss">
+    #installation {
+        @apply text-2xl font-bold;
+    }
+</style>
