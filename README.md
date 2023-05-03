@@ -1,6 +1,10 @@
 # @do-kevin/pc-vn
 
-A small package that helps retrieve a list of Vietnam's provinces, districts, and wards.
+Type-safe & simple utility library for searching and filtering Vietnam's localities.
+
+## Documentation
+
+Visit the [official documentation](https://do-kevin.github.io/pc-vn).
 
 ## Install
 

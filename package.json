@@ -2,7 +2,7 @@
   "name": "@do-kevin/pc-vn",
   "private": false,
   "version": "2.1.1",
-  "description": "Helper to get provinces, cities, wards of Vietnam",
+  "description": "Type-safe & simple utility library for searching and filtering Vietnam's localities.",
   "main": "dist/pc-vn.cjs.js",
   "module": "dist/es/pc-vn.esm.js",
   "browser": "dist/pc-vn.umd.js",
@@ -15,12 +15,16 @@
     "test": "jest --config jest.config.ts"
   },
   "keywords": [
-    "Provinces of Vietnam",
-    "Cities of Vietnam",
-    "How to get these provinces of Vietnam",
-    "How to get these cities of Vietnam"
+    "vietnam",
+    "ward",
+    "district",
+    "province",
+    "localities",
+    "search",
+    "filter",
+    "javascript"
   ],
-  "homepage": "https://github.com/do-kevin/pc-vn",
+  "homepage": "https://do-kevin.github.io/pc-vn",
   "bugs": {
     "url": "https://github.com/do-kevin/pc-vn/pc-vn/issues"
   },
