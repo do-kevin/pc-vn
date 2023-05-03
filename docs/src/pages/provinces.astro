@@ -1,0 +1,15 @@
+---
+import { Content as ProvinceContent, frontmatter } from "../contents/province.mdx";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DashboardLayout from "../layouts/DashboardLayout.astro";
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+    <DashboardLayout>
+        <main class="mx-auto p-4">
+            <article>
+                <ProvinceContent />
+            </article>
+        </main>
+    </DashboardLayout>
+</BaseLayout>

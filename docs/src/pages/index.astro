@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import { Content as UsageCodeBlock } from "../contents/usage.mdx";
+import { Content as NpmScript } from "../contents/npm-install.mdx";
+import { Content as PnpmScript } from "../contents/pnpm-install.mdx";
+import { Content as YarnScript } from "../contents/yarn-install.mdx";
+---
+
+<Layout title="PC-VN">
+	<main class="mx-auto px-4 py-6 text-center h-full w-full text-sm">
+		<article class="py-16">
+			<h1 class="text-6xl text-primary font-bold mb-6">pc-vn</h1>
+			<p class="text-xl mb-8">
+				Type-safe & simple utility library for searching and filtering <u class="decoration-dashed decoration-pink-300 decoration-4">Vietnam's localities</u>.
+			</p>
+			<a href="/install" class="inline-block text-xl bg-primary px-12 text-white py-2 rounded-lg mb-8">
+				Get Started
+			</a>
+			<section class="max-w-screen-md mx-auto mb-8">
+				<h2 class="h2">
+					Quick Install
+				</h2>
+				<NpmScript />
+				<br />
+				<PnpmScript />
+				<br />
+				<YarnScript />
+			</section>
+			<section class="max-w-screen-md mx-auto mb-8">
+				<h2 class="h2">
+					Usage
+				</h2>
+				<UsageCodeBlock />			
+			</section>
+			<section class="flex flex-col max-w-screen-md mx-auto">
+				<h2 class="h2">API Reference</h2>
+				<ul class="text-left mx-auto grid grid-cols-1 gap-3 md:grid-cols-3">
+					<li>
+						<a href="/provinces" class="anchor-card border-primary-2 bg-secondary-2">
+							<h3 class="anchor-card__heading text-primary-2">
+								Province
+							</h3>
+							<p>
+								Get a list of Vietnam's provinces.
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="/districts" class="anchor-card border-2 border-primary-3 bg-secondary-3">
+							<h3 class="anchor-card__heading text-primary-3">
+								District	
+							</h3>
+							<p>
+								Get a list of districts and filter them by province.
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="/wards" class="anchor-card border-2 border-primary-4 bg-secondary-4">
+							<h3 class="anchor-card__heading text-primary-4">
+								Ward	
+							</h3>
+							<p>
+								Search and filter wards by district or province.
+							</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer slot="footer" class="bg-[#245B46] text-center p-4 text-sm flex text-center flex-col text-green-200 items-center">
+		<a href="https://github.com/do-kevin/pc-vn" target="_blank" rel="noopener noreferrer" class="mb-1 w-20">GitHub</a>
+		<a href="https://www.npmjs.com/package/@do-kevin/pc-vn" target="_blank" rel="noopener noreferrer" class="mb-1 w-20">NPM</a>
+		<p class="text-slate-200 font-light">
+			Kevin Do © 2023
+		</p>
+	</footer>
+</Layout>
+
+<style lang="scss">
+	body {
+		@apply bg-secondary text-[#252525];
+	}
+
+	.h2 {
+		@apply text-xl mb-6;
+	}
+
+	.anchor-card {
+		@apply w-full h-full border-2 inline-block p-4 rounded-lg;
+
+		&__heading {
+			@apply font-bold mb-4;
+		}
+	}
+</style>
