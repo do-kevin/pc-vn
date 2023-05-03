@@ -5,7 +5,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://do-kevin.github.io/pc-vn',
+  site: 'https://do-kevin.github.io',
+  base: '/pc-vn',
   integrations: [
     mdx({
       shikiConfig: {
