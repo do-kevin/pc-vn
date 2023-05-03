@@ -6,19 +6,19 @@ export interface Props {}
 	<aside class="bg-white p-4 h-full rounded-lg mt-10 font-light ml-4">
 		<ul>
 			<li>
-				<a href="/">Home</a>
+				<a href={import.meta.env.PROD ? "/pc-vn/" : "/"}>Home</a>
 			</li>
 			<li>
-				<a href="/install">Installation</a>
+				<a href={import.meta.env.PROD ? "/pc-vn/install" : "/install"}>Installation</a>
 			</li>
 			<li>
-				<a href="/provinces">Provinces</a>
+				<a href={import.meta.env.PROD ? "/pc-vn/provinces" : "/provinces"}>Provinces</a>
 			</li>
 			<li>
-				<a href="/districts">Districts</a>
+				<a href={import.meta.env.PROD ? "/pc-vn/districts" : "/districts"}>Districts</a>
 			</li>
 			<li>
-				<a href="/wards">Wards</a>
+				<a href={import.meta.env.PROD ? "/pc-vn/wards" : "/wards"}>Wards</a>
 			</li>
 		</ul>
 	</aside>

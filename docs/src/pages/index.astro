@@ -13,7 +13,7 @@ import { Content as YarnScript } from "../contents/yarn-install.mdx";
 			<p class="text-xl mb-8">
 				Type-safe & simple utility library for searching and filtering <u class="decoration-dashed decoration-pink-300 decoration-4">Vietnam's localities</u>.
 			</p>
-			<a href="/install" class="inline-block text-xl bg-primary px-12 text-white py-2 rounded-lg mb-8">
+			<a href={import.meta.env.PROD ? "/pc-vn/install" : "/install"} class="inline-block text-xl bg-primary px-12 text-white py-2 rounded-lg mb-8">
 				Get Started
 			</a>
 			<section class="max-w-screen-md mx-auto mb-8">
@@ -36,7 +36,7 @@ import { Content as YarnScript } from "../contents/yarn-install.mdx";
 				<h2 class="h2">API Reference</h2>
 				<ul class="text-left mx-auto grid grid-cols-1 gap-3 md:grid-cols-3">
 					<li>
-						<a href="/pc-vn/provinces" class="anchor-card border-primary-2 bg-secondary-2">
+						<a href={import.meta.env.PROD ? "/pc-vn/provinces" : "/provinces"} class="anchor-card border-primary-2 bg-secondary-2">
 							<h3 class="anchor-card__heading text-primary-2">
 								Province
 							</h3>
@@ -46,7 +46,7 @@ import { Content as YarnScript } from "../contents/yarn-install.mdx";
 						</a>
 					</li>
 					<li>
-						<a href="/districts" class="anchor-card border-2 border-primary-3 bg-secondary-3">
+						<a href={import.meta.env.PROD ? "/pc-vn/districts" : "/districts"} class="anchor-card border-2 border-primary-3 bg-secondary-3">
 							<h3 class="anchor-card__heading text-primary-3">
 								District	
 							</h3>
@@ -56,7 +56,7 @@ import { Content as YarnScript } from "../contents/yarn-install.mdx";
 						</a>
 					</li>
 					<li>
-						<a href="/wards" class="anchor-card border-2 border-primary-4 bg-secondary-4">
+						<a href={import.meta.env.PROD ? "/pc-vn/wards" : "/wards"} class="anchor-card border-2 border-primary-4 bg-secondary-4">
 							<h3 class="anchor-card__heading text-primary-4">
 								Ward	
 							</h3>
