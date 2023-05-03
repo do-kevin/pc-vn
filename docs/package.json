@@ -1,0 +1,19 @@
+{
+  "name": "do-kevin-pc-vn-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.0",
+    "@astrojs/tailwind": "^3.1.2",
+    "astro": "^2.3.3",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.0.24"
+  }
+}

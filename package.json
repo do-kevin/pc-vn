@@ -29,6 +29,16 @@
     "url": "https://github.com/do-kevin/pc-vn.git"
   },
   "author": "Kevin Do",
+  "contributors": [
+    {
+      "name": "Kevin Do",
+      "url": "https://github.com/do-kevin"
+    },
+    {
+      "name": "Mai Dong Giang",
+      "url": "https://github.com/giangmd"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
