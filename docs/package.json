@@ -11,9 +11,14 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.0",
+    "@astrojs/solid-js": "^2.2.0",
     "@astrojs/tailwind": "^3.1.2",
+    "@astrojs/ts-plugin": "^1.0.10",
+    "@nanostores/solid": "^0.4.2",
     "astro": "^2.3.3",
+    "nanostores": "^0.9.1",
     "sass": "^1.62.1",
+    "solid-js": "^1.4.3",
     "tailwindcss": "^3.0.24"
   }
 }

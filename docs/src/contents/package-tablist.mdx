@@ -1,0 +1,16 @@
+import PackageTabList from '../components/PackageTabList';
+import NpmInstall from './npm-install.mdx';
+import PnpmInstall from './pnpm-install.mdx';
+import YarnInstall from './yarn-install.mdx';
+
+<PackageTabList>
+  <Fragment slot="npm">
+    <NpmInstall />
+  </Fragment>
+  <Fragment slot="pnpm">
+    <PnpmInstall />
+  </Fragment>
+  <Fragment slot="yarn">
+    <YarnInstall />
+  </Fragment>
+</PackageTabList>
