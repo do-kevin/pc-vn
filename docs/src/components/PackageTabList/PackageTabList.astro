@@ -1,0 +1,15 @@
+---
+import { PackageTabs } from "./PackageTabs";
+---
+
+<PackageTabs client:load>
+    <Fragment slot="npm">
+        <slot name="npm" />
+    </Fragment>
+    <Fragment slot="pnpm">
+        <slot name="pnpm" />
+    </Fragment>
+    <Fragment slot="yarn">
+        <slot name="yarn" />
+    </Fragment>
+</PackageTabs>
