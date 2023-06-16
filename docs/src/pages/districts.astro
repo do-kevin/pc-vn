@@ -6,9 +6,69 @@ import DashboardLayout from "../layouts/DashboardLayout.astro";
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
     <DashboardLayout>
-        <main class="mx-auto p-4">
+        <main class="mx-auto">
             <article>
+                <h1 class="text-4xl mb-3 font-bold">
+                    District
+                </h1>
                 <DistrictContent />
+                <section>
+                    <h2 class="text-2xl mt-6 font-bold">
+                        API
+                    </h2>
+                    <table class="w-full text-sm text-left mt-4">
+                        <thead class="text-left text-xs text-white uppercase bg-gray-50">
+                            <tr>
+                                <th scope="col" class="rounded-tl px-6 py-3 bg-slate-500">Function</th>
+                                <th scope="col" class="px-6 py-3 bg-slate-500">Description</th>
+                                <th scope="col" class="px-6 py-3 bg-slate-500">Parameter</th>
+                                <th scope="col" class="px-6 py-3 bg-slate-500">Type</th>
+                                <th scope="col" class="rounded-tr px-6 py-3 bg-slate-500">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">getDistricts</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">Retrieve lists of districts.</td>
+                                <td></td>
+                                <td></td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">District[]</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">getDistrictsByProvinceCode</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">Filter list of districts by province code.</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">provinceCode</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">string</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">District[]</td>
+                            </tr>
+                            <tr class="bg-white rounded-b">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">District</td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap w-full">
+                                    <code>
+                                        <span class="block">
+                                            Province & &lcub;
+                                        </span>
+                                        <span class="block">
+                                            &nbsp;&nbsp;province_code: string;
+                                        </span>
+                                        <span class="block">
+                                            &nbsp;&nbsp;province_name: string;
+                                        </span>
+                                        <span class="block">
+                                            &nbsp;&nbsp;full_name: string;
+                                        </span>
+                                        <span class="block">
+                                            &rcub;
+                                        </span> 
+                                    </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </article>
         </main>
     </DashboardLayout>

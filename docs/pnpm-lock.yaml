@@ -13,6 +13,9 @@ dependencies:
   '@astrojs/ts-plugin':
     specifier: ^1.0.10
     version: 1.0.10
+  '@fortawesome/fontawesome-free':
+    specifier: ^6.4.0
+    version: 6.4.0
   '@nanostores/solid':
     specifier: ^0.4.2
     version: 0.4.2(nanostores@0.9.1)(solid-js@1.7.6)
@@ -641,6 +644,12 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fortawesome/fontawesome-free@6.4.0:
+    resolution: {integrity: sha512-0NyytTlPJwB/BF5LtRV8rrABDbe3TdTXqNB3PdZ+UUUZAEIrdOJdmABqKjt4AXwIoJNaRVVZEXxpNrqvE1GAYQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
