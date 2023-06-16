@@ -6,8 +6,11 @@ import DashboardLayout from "../layouts/DashboardLayout.astro";
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description} sidebar>
     <DashboardLayout>
-        <main class="mx-auto p-4">
+        <main class="mx-auto">
             <article>
+                <h1 class="text-4xl mb-3 font-bold">
+                    Ward
+                </h1>
                 <WardContent />
             </article>
         </main>
