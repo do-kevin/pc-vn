@@ -1,28 +1,47 @@
 ---
 export interface Props {}
+
+const linkClass = "text-slate-700 hover:border-r-2 hover:border-primary hover:border-solid hover:text-primary hover:font-bold px-4 py-2 text-left w-full block";
 ---
 
-<div class="flex gap-10 w-full h-full mx-auto max-w-screen-lg flex-wrap">
-	<aside class="bg-white p-4 h-full rounded-lg mt-10 font-light ml-4">
-		<ul>
-			<li>
-				<a href={import.meta.env.PROD ? "/pc-vn/" : "/"}>Home</a>
-			</li>
-			<li>
-				<a href={import.meta.env.PROD ? "/pc-vn/install" : "/install"}>Installation</a>
-			</li>
-			<li>
-				<a href={import.meta.env.PROD ? "/pc-vn/provinces" : "/provinces"}>Provinces</a>
-			</li>
-			<li>
-				<a href={import.meta.env.PROD ? "/pc-vn/districts" : "/districts"}>Districts</a>
-			</li>
-			<li>
-				<a href={import.meta.env.PROD ? "/pc-vn/wards" : "/wards"}>Wards</a>
-			</li>
+<div class="min-h-screen w-full">
+	<nav class="p-4 border-b border-solid border-[#cce2d0]">
+		<ul class="flex mx-auto max-w-screen-xl justify-between">
+			<a href={import.meta.env.PROD ? "/pc-vn/" : "/"} class="text-xl font-bold text-primary">@do-kevin/pc-vn</a>
+			<a href="https://github.com/do-kevin/pc-vn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>&nbsp;GitHub</a>
 		</ul>
-	</aside>
-	<slot />
+	</nav>
+	<div class="flex w-full h-full mx-auto max-w-screen-xl flex-wrap">
+		<aside class="py-8 font-light border-r border-solid border-[#cce2d0]">
+			<ul class="mb-5">
+				<li class="mb-2.5">
+					<a href={import.meta.env.PROD ? "/pc-vn/" : "/"}><i class="fa-solid fa-house relative bottom-[2px]"></i>&nbsp&nbsp;Home{" "}</a>
+				</li>
+			</ul>
+			<h2 class="font-lg font-semibold mb-3 border-b border-solid border-[#cce2d0] pr-4 pb-2">Getting started</h2>
+			<ul class="mb-5">
+				<li class="mb-2.5">
+					<a href={import.meta.env.PROD ? "/pc-vn/install" : "/install"} class={linkClass}>Installation</a>
+				</li>
+			</ul>
+			<h2 class="font-lg font-semibold mb-3 border-b border-solid border-[#cce2d0] pr-4 pb-2">References</h2>
+			<ul>
+				<li class="mb-2.5">
+					<a href={import.meta.env.PROD ? "/pc-vn/provinces" : "/provinces"} class={linkClass}>Provinces</a>
+				</li>
+				<li class="mb-2.5">
+					<a href={import.meta.env.PROD ? "/pc-vn/districts" : "/districts"} class={linkClass}>Districts</a>
+				</li>
+				<li class="mb-2.5">
+					<a href={import.meta.env.PROD ? "/pc-vn/wards" : "/wards"} class={linkClass}>Wards</a>
+				</li>
+			</ul>
+		</aside>
+		<article class="p-8">
+			<slot />
+		</article>
+	</div>
+
 </div>
 
 <style>

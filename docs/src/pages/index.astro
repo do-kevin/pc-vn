@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import { Content as UsageCodeBlock } from "../contents/usage.mdx";
-import { Content as NpmScript } from "../contents/npm-install.mdx";
-import { Content as PnpmScript } from "../contents/pnpm-install.mdx";
-import { Content as YarnScript } from "../contents/yarn-install.mdx";
+import { Content as PackageTabContent } from "../contents/package-tablist.mdx";
 ---
 
 <Layout title="PC-VN">
@@ -17,14 +15,10 @@ import { Content as YarnScript } from "../contents/yarn-install.mdx";
 				Get Started
 			</a>
 			<section class="max-w-screen-md mx-auto mb-8">
-				<h2 class="h2">
-					Quick Install
-				</h2>
-				<NpmScript />
-				<br />
-				<PnpmScript />
-				<br />
-				<YarnScript />
+				<h2 class="h2">Quick Install</h2>
+			</section>
+			<section class="max-w-screen-md mx-auto mb-8">
+				<PackageTabContent />
 			</section>
 			<section class="max-w-screen-md mx-auto mb-8">
 				<h2 class="h2">
